@@ -20,11 +20,15 @@ const Login: FC = () => {
               LOGIN
             </h1>
             <div className="w-full">
-              <label className=" dark:text-white">Email</label>
+              <label className=" dark:text-white">
+                Email <span className="text-red">*</span>
+              </label>
               <Input placeholder="Enter Your Email" id="Email" type="email" />
             </div>
             <div className="w-full">
-              <label className=" dark:text-white">Password</label>
+              <label className=" dark:text-white">
+                Password <span className="text-red">*</span>
+              </label>
               <Input
                 placeholder="Enter Your Password"
                 id="input-password"
@@ -32,15 +36,6 @@ const Login: FC = () => {
               />
             </div>
             <PrimButton label="Login" id="button-login" type="submit" />
-            <p className="text-black dark:text-white">
-              Don't have an account?{" "}
-              <a
-                className="font-bold text-black dark:text-@2A9D8F hover:text-@427AA1"
-                id="nav-register "
-              >
-                Register
-              </a>
-            </p>
           </form>
         </div>
       </div>

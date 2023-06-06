@@ -32,6 +32,7 @@ export default {
         "@A5BE00": "#A5BE00",
         "@427AA1": "#427AA1",
         "@00B4D8": "#00B4D8",
+        red: "#FF0000",
       },
     },
     borderRadius: {

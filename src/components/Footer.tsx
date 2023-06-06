@@ -9,7 +9,7 @@ export const Footer: FC = () => {
           {/* <!-- Grid --> */}
           <div className=" grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 ">
             <div className="col-span-full lg:col-span-1">
-              <img src={logo} alt="" />
+              <img src={logo} width={150} height={150} alt="" />
               <a
                 className="inline-flex gap-x-2 text-@EBF2FA hover:text-white"
                 href="#"

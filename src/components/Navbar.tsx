@@ -11,7 +11,7 @@ export const Navbar: FC = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-between">
             <a>
-              <img src={logo} alt="" />
+              <img src={logo} width={150} height={150} alt="" />
             </a>
           </div>
         </div>

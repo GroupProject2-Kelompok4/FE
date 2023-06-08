@@ -4,9 +4,10 @@ import Login from "../src/pages/Login";
 import "./index.css";
 import MenteeLog from "./pages/MenteeLog";
 import AddMentee from "./pages/AddMentee";
+import ProfileUser from "./pages/ProfileUser";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <AddMentee />
+    <ProfileUser />
   </React.StrictMode>
 );

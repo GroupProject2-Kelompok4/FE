@@ -9,7 +9,7 @@ export const PrimButton: FC<PrimButton> = (props) => {
 
   return (
     <button
-      className="py-2 px-4 w-full justify-center items-center gap-2 rounded-md border text-lg bg-@19345E disabled:hidden text-@EBF2FA font-bold shadow-sm align-middle hover:scale-105 focus:outline-none   transition-all text-md dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
+      className="py-2 px-4 w-full justify-center items-center gap-2 rounded-md border bg-@19345E disabled:hidden text-@EBF2FA shadow-sm align-middle hover:scale-105 focus:outline-none   transition-all dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
       {...props}
     >
       {label}

@@ -34,7 +34,7 @@ export const Comments: FC<TextareaHTMLAttributes<HTMLTextAreaElement>> = (
         className="rounded-lg resize-none  bg-white text-black p-2 focus:outline-none focus:border-white focus:ring-1 focus:ring-white w-fit md:w-full h-fit md:h-full"
         {...props}
       />
-      <button className="absolute p-1.5 text-xl md:text-4xl text-@19345E hover:scale-125  disabled:hover:bg-transparent dark:disabled:hover:bg-transparent right-1 md:right-2 disabled:opacity-40">
+      <button className="absolute p-1.5 text-xl md:text-4xl text-@primary hover:scale-125  disabled:hover:bg-transparent dark:disabled:hover:bg-transparent right-1 md:right-2 disabled:opacity-40">
         <IoMdSend />
       </button>
     </div>

@@ -74,7 +74,7 @@ const Login: FC = () => {
             className="flex flex-col w-full lg:w-7/12 p-5 items-center shadow-md bg-white dark:bg-@264653 gap-3 rounded-md"
             onSubmit={authLogin}
           >
-            <h1 className="font-semibold text-3xl text-back dark:text-white">
+            <h1 className="font-semibold text-3xl text-black dark:text-white">
               LOGIN
             </h1>
             <div className="w-full">

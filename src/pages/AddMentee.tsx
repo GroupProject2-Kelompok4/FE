@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { LoggedInNavbar } from "../components/LoggedInNavbar";
 import { Footer } from "../components/Footer";
 import { Input } from "../components/Input";
@@ -296,10 +296,10 @@ const AddMentee: React.FC = () => {
                 onChange={handleEmergencyStatusChange}
               >
                 <option>Status...</option>
-                <option value="option1">Ayah</option>
-                <option value="option2">Ibu</option>
-                <option value="option3">Kakak</option>
-                <option value="option4">Adik</option>
+                <option value="Ayah">Ayah</option>
+                <option value="Ibu">Ibu</option>
+                <option value="Kakak">Kakak</option>
+                <option value="Adik">Adik</option>
               </DropdownInput>
             </div>
           </div>
@@ -375,8 +375,8 @@ const AddMentee: React.FC = () => {
             <div className="w-3/4 ml-36">
               <DropdownInput value={status} onChange={handleStatusChange}>
                 <option>Status...</option>
-                <option value="option1">Active</option>
-                <option value="option2">Non-Active</option>
+                <option value="Active">Active</option>
+                <option value="Non-Active">Non-Active</option>
               </DropdownInput>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { MdDeleteForever, MdModeEdit } from "react-icons/md";
 import { IoEllipsisHorizontalSharp } from "react-icons/io5";
 

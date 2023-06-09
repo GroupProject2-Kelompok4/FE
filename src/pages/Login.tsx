@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect, useCallback } from "react";
+import { FC, useState, useEffect, useCallback } from "react";
 import { PrimButton } from "../components/Button";
 import { Layout } from "../components/Layout";
 import { Input } from "../components/Input";
@@ -65,7 +65,7 @@ const Login: FC = () => {
 
   return (
     <Layout>
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 bg-slate-100  dark:bg-slate-800">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 w-full h-full bg-slate-100">
         <div className="flex justify-center items-center">
           <img src={loginImage} alt="image-login" className="hidden md:block" />
         </div>

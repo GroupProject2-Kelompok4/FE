@@ -13,7 +13,7 @@ const Searchbar: React.FC<SearchbarProps> = ({
     <div className="flex gap-2">
       <form className="text-left">
         <label>
-          <span className="text-@19345E">Search</span>
+          <span className="text-@primary">Search</span>
         </label>
         <div>
           <input

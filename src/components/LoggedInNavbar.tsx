@@ -1,7 +1,7 @@
 import { FC, useCallback, useState } from "react";
 import logo from "../assets/logo.png";
 import Swal from "sweetalert2";
-import { AuthState, User, logout } from "../store/features/userSlice";
+import { logout } from "../store/features/userSlice";
 import { Link, useNavigate } from "react-router-dom";
 
 interface NavbarProps {
@@ -114,10 +114,10 @@ export const LoggedInNavbar: FC<NavbarProps> = ({ imageSrc }) => {
     </header>
   );
 };
-function dispatch(arg0: any) {
+function dispatch(_arg0: any) {
   throw new Error("Function not implemented.");
 }
 
-function removeCookie(arg0: string) {
+function removeCookie(_arg0: string) {
   throw new Error("Function not implemented.");
 }

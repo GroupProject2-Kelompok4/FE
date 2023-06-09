@@ -1,6 +1,6 @@
 import { FC } from "react";
 import logo from "../assets/logo.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface Props {
   onLogout?: React.MouseEventHandler;
@@ -14,9 +14,9 @@ export const Navbar: FC<Props> = ({ onLogout }) => {
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-between">
-            <a>
+            <Link to={"/dashboard"}>
               <img src={logo} width={100} height={100} alt="" />
-            </a>
+            </Link>
           </div>
         </div>
         <div

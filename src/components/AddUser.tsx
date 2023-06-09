@@ -180,9 +180,12 @@ const AddUser: React.FC<FormProps> = ({ onSubmit, editValues, editMode }) => {
             </div>
 
             <div className="flex justify-between items-center mt-6">
-              <h1 className="text-accent visible">Please enter all fields</h1>
+              <h1 className="visible text-@primary">Please enter all fields</h1>
               <button type="submit">
-                <label htmlFor={submitable} className="btn btn-accent">
+                <label
+                  htmlFor={submitable}
+                  className="btn btn-accent bg-@primary border border-@primary text-white"
+                >
                   Submit
                 </label>
               </button>

@@ -1,9 +1,8 @@
-import React, { useEffect, useCallback } from "react";
+import { useEffect, useCallback } from "react";
 import { Layout } from "../components/Layout";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { useSelector } from "react-redux";
-import { AuthState, User, login, logout } from "../store/features/userSlice";
+import { logout } from "../store/features/userSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import CardDashboard from "../components/CardDashboard";
@@ -20,8 +19,8 @@ import {
 } from "recharts";
 
 const Dashboard = () => {
-  const [cookies, setCookie, removeCookie] = useCookies(["userToken"]);
-  const auth = useSelector((state: { auth: AuthState }) => state.auth);
+  const [cookies, , removeCookie] = useCookies(["userToken"]);
+  // const auth = useSelector((state: { auth: AuthState }) => state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -56,17 +55,17 @@ const Dashboard = () => {
     }
   }, [cookies.userToken, dispatch]);
   const data = [
-    { name: "April", Register: 1000, Placement: 2000, Graduates: 1000 },
-    { name: "May", Register: 2000, Placement: 1500, Graduates: 2000 },
-    { name: "June", Register: 3000, Placement: 1000, Graduates: 3000 },
-    { name: "July", Register: 1000, Placement: 400, Graduates: 900 },
+    { name: "April", Register: 100, Placement: 200, Graduates: 500 },
+    { name: "May", Register: 200, Placement: 150, Graduates: 200 },
+    { name: "June", Register: 300, Placement: 100, Graduates: 300 },
+    { name: "July", Register: 100, Placement: 400, Graduates: 100 },
   ];
   document.title = "Dashboard";
   return (
     <Layout>
       <Navbar onLogout={handleLogout} />
 
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full pt-10 pb-10">
         <CardDashboard />
         <div className="flex justify-center mt-20 ">
           <div className="text-center bg-zinc-200 h-full pt-5 p-5 rounded-xl">

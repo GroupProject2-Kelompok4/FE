@@ -13,6 +13,7 @@
     "@preline/dropdown": "^1.3.0",
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
+    "daisyui": "^3.0.20",
     "preline": "^1.8.0",
     "react": "^18.2.0",
     "react-cookie": "^4.1.1",

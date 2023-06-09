@@ -61,32 +61,29 @@ export const GenderInput: FC<InputHTMLAttributes<HTMLInputElement>> = (
       <label className="mr-2 flex flex-row">
         <input
           type="radio"
-          value="male"
-          checked={value === "male"}
+          value="M"
+          checked={value === "M"}
           onChange={onChange}
           className="hidden"
         />
         <div
           className={`w-8 h-8 rounded-full border-2 ${
-            value === "male" ? "bg-blue-500 border-blue-500" : "border-gray-400"
+            value === "M" ? "bg-blue-500 border-blue-500" : "border-gray-400"
           }`}
-        >
-        </div>
+        ></div>
         <span className="ml-2 text-lg">Male</span>
       </label>
       <label className="flex flex-row">
         <input
           type="radio"
-          value="female"
-          checked={value === "female"}
+          value="F"
+          checked={value === "F"}
           onChange={onChange}
           className="hidden"
         />
         <div
           className={`w-8 h-8 rounded-full border-2 ${
-            value === "female"
-              ? "bg-blue-500 border-blue-500"
-              : "border-gray-400"
+            value === "F" ? "bg-blue-500 border-blue-500" : "border-gray-400"
           }`}
         >
           <span className="text-white flex justify-center items-center h-full"></span>

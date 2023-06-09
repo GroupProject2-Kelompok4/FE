@@ -8,6 +8,6 @@ import ProfileUser from "./pages/ProfileUser";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <ProfileUser />
+    <AddMentee />
   </React.StrictMode>
 );

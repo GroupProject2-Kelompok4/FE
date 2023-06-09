@@ -26,13 +26,14 @@ export default {
     },
     extend: {
       colors: {
-        "@19345E": "#19345E",
+        "@primary": "#19345E",
         "@EBF2FA": "#EBF2FA",
         "@679436": "#679436",
         "@A5BE00": "#A5BE00",
         "@427AA1": "#427AA1",
         "@00B4D8": "#00B4D8",
         red: "#FF0000",
+        "@F47522": "#F47522",
       },
     },
     borderRadius: {
@@ -47,5 +48,5 @@ export default {
       yes: "2rem",
     },
   },
-  plugins: [require("preline/plugin")],
+  plugins: [require("preline/plugin"), require("daisyui")],
 };

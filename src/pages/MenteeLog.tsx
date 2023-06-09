@@ -58,5 +58,4 @@ const MenteeLog: FC = () => {
     </div>
   );
 };
-
 export default MenteeLog;

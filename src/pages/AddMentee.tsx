@@ -210,6 +210,16 @@ const AddMentee: React.FC = () => {
 
   const handleUserChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setUser(event.target.value);
+  const handleGenderChange = (event: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
+    setGender(event.target.value);
+  };
+
+  const handleAcademicChange = (event: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
+    setAcademic(event.target.value);
   };
   return (
     <div>

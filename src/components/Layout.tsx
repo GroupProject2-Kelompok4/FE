@@ -1,6 +1,4 @@
 import { FC, ReactNode } from "react";
-import { Navbar } from "./Navbar";
-import { Footer } from "./Footer";
 
 interface Props {
   children: ReactNode;
@@ -8,11 +6,5 @@ interface Props {
 
 export const Layout: FC<Props> = (props) => {
   const { children } = props;
-  return (
-    <div className="h-screen dark:bg-slate-900">
-      <Navbar />
-      {children}
-      <Footer />
-    </div>
-  );
+  return <div className="h-screen dark:bg-slate-900">{children}</div>;
 };

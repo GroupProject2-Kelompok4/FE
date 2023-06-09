@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 export const Footer: FC = () => {
   return (
     <div>
-      <footer className="bg-@19345E">
+      <footer className="bg-@primary">
         <div className="max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
           {/* <!-- Grid --> */}
           <div className=" grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 ">
@@ -94,7 +94,7 @@ export const Footer: FC = () => {
           {/* <!-- End Grid --> */}
         </div>
       </footer>
-      <footer className="bg-@19345E">
+      <footer className="bg-@primary">
         <div className="max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 lg:pt-0.5 mx-auto">
           <div className="sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
             <div className="flex justify-between items-center">

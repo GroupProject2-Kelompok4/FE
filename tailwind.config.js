@@ -34,6 +34,7 @@ export default {
         "@00B4D8": "#00B4D8",
         red: "#FF0000",
         "@F47522": "#F47522",
+        "dark-alta": "#19345E",
       },
     },
     borderRadius: {
@@ -48,5 +49,5 @@ export default {
       yes: "2rem",
     },
   },
-  plugins: [require("preline/plugin"), require("daisyui")],
+  plugins: [require("daisyui")],
 };

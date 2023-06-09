@@ -9,13 +9,12 @@ import Filter from "../components/Filter";
 import { Navbar } from "../components/Navbar";
 import Searchbar from "../components/Searchbar";
 import Table from "../components/Table";
-import { AuthState, User, logout } from "../store/features/userSlice";
+import { AuthState, logout } from "../store/features/userSlice";
 import AddUser, { FormValues } from "../components/AddUser";
 import { MdPersonAddAlt1 } from "react-icons/md";
-import { Footer } from "../components/Footer";
 
 const UserList = () => {
-  const [cookies, setCookie, removeCookie] = useCookies(["userToken"]);
+  const [cookies, , removeCookie] = useCookies(["userToken"]);
   const auth = useSelector((state: { auth: AuthState }) => state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -52,7 +51,7 @@ const UserList = () => {
       dispatch(logout());
     }
   }, [cookies.userToken, dispatch]);
-  const [page, setPage] = useState<number>(1);
+  // const [page, setPage] = useState<number>(1);
   const endpoint = `https://peterzalai.biz.id/users`;
   const [rows, setRows] = useState<any>([]);
   const [loading, setLoading] = useState<boolean>(true);

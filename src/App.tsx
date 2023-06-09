@@ -21,7 +21,7 @@ function App() {
         <Route path="/userlist" element={<UserList />} />
         <Route path="/classlist" element={<ClassList />} />
         <Route path="/menteelist" element={<MenteeList />} />
-        <Route path="/menteelog/:id" element={<MenteeLog />} />
+        <Route path="/menteelog/" element={<MenteeLog />} />
         <Route path="/profile" element={<ProfileUser />} />
       </Routes>
     </BrowserRouter>

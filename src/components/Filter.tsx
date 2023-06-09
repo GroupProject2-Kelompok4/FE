@@ -18,7 +18,7 @@ const Filter: React.FC<FilterProps> = ({
   return (
     <form className="text-left">
       <label>
-        <span className="text-@19345E">{labelText}</span>
+        <span className="text-@primary">{labelText}</span>
       </label>
       <div>
         <select

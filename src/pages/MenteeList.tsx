@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
 import { Layout } from "../components/Layout";
@@ -9,20 +9,17 @@ import Filter from "../components/Filter";
 import { Navbar } from "../components/Navbar";
 import Searchbar from "../components/Searchbar";
 import Table from "../components/Table";
-import { AuthState, User, logout } from "../store/features/userSlice";
-import AddUser, { FormValues } from "../components/AddUser";
+import { logout } from "../store/features/userSlice";
 import { Link } from "react-router-dom";
 import ModalMentees, { FromMenteesValue } from "../components/ModalMentees";
 import { FaUsers } from "react-icons/fa";
 
 const MenteeList = () => {
   // Cookies for login & logout
-  const [cookies, setCookie, removeCookie] = useCookies(["userToken"]);
-  const auth = useSelector((state: { auth: AuthState }) => state.auth);
+  const [cookies, , removeCookie] = useCookies(["userToken"]);
+  // const auth = useSelector((state: { auth: AuthState }) => state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const name = JSON.parse(localStorage.getItem("user") || "") as User;
 
   const handleLogout = useCallback(() => {
     Swal.fire({
@@ -57,14 +54,14 @@ const MenteeList = () => {
   }, [cookies.userToken, dispatch]);
 
   // Tables
-  const [page, setPage] = useState<number>(1);
+  // const [page, setPage] = useState<number>(1);
   const endpoint = `https://peterzalai.biz.id/mentees`;
   const endpointClass = `https://peterzalai.biz.id/classes`;
   const [rows, setRows] = useState<any>([]);
   const [classes, setClasses] = useState<any>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
-  const filters: string[] = ["Team", "Role", "Status"];
+  // const filters: string[] = ["Team", "Role", "Status"];
   const headers: Record<string, string> = {
     id: "ID",
     fullname: "Name",

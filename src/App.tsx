@@ -5,10 +5,11 @@ import UserList from "./pages/UserList";
 import Dashboard from "./pages/Dashboard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CookiesProvider } from "react-cookie";
-import AddMentee from "./pages/AddNewMentee";
+import AddMentee from "./pages/AddMentee";
 import MenteeLog from "./pages/MenteeLog";
 import ClassList from "./pages/ClassList";
 import MenteeList from "./pages/MenteeList";
+import ProfileUser from "./pages/ProfileUser";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/classlist" element={<ClassList />} />
         <Route path="/menteelist" element={<MenteeList />} />
         <Route path="/menteelog/:id" element={<MenteeLog />} />
+        <Route path="/profile" element={<ProfileUser />} />
       </Routes>
     </BrowserRouter>
   );

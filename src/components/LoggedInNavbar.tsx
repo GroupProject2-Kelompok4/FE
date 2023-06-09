@@ -1,27 +1,57 @@
-import { FC, useState } from "react";
+import { FC, useCallback, useState } from "react";
 import logo from "../assets/logo.png";
+import Swal from "sweetalert2";
+import { AuthState, User, logout } from "../store/features/userSlice";
+import { Link, useNavigate } from "react-router-dom";
 
 interface NavbarProps {
   imageSrc: string;
 }
-export const LoggedInNavbar: FC<NavbarProps> = ({imageSrc}) => {
+export const LoggedInNavbar: FC<NavbarProps> = ({ imageSrc }) => {
   const [dropdownOpen, setDropDownOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handlePictureClick = () => {
     setDropDownOpen(!dropdownOpen);
   };
 
+  const handleLogout = useCallback(() => {
+    Swal.fire({
+      title: "Are you sure?",
+      // text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      confirmButtonText: "Yes",
+      cancelButtonColor: "#d33",
+      cancelButtonText: "No",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          text: "Logout successfully",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        dispatch(logout());
+        removeCookie("userToken");
+        navigate("/");
+      }
+    });
+  }, []);
+
   return (
-    <header className="relative flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-@19345E text-xl py-5 dark:bg-@264653">
+    <header className="relative flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-@primary text-xl py-5 dark:bg-@264653">
       <nav
         className="max-w-[85rem] flex w-full mx-auto px-4"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-between">
-            <a>
-              <img src={logo} width={150} height={150} alt="" />
-            </a>
+            <Link to={"/dashboard"}>
+              <img src={logo} width={150} height={150} />
+            </Link>
           </div>
         </div>
         <div
@@ -33,19 +63,19 @@ export const LoggedInNavbar: FC<NavbarProps> = ({imageSrc}) => {
             id="menu"
           >
             <li>
-              <a href="#" className="text-@EBF2FA">
+              <Link to={"/userlist"} className="text-@EBF2FA">
                 Users
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-@EBF2FA">
+              <Link to={"/menteelist"} className="text-@EBF2FA">
                 Mentees
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-@EBF2FA">
+              <Link to={"/classlist"} className="text-@EBF2FA">
                 Classes
-              </a>
+              </Link>
             </li>
             <li className="relative" id="nav-profile-picture">
               <div onClick={handlePictureClick}>
@@ -59,17 +89,17 @@ export const LoggedInNavbar: FC<NavbarProps> = ({imageSrc}) => {
                 <div className="dropdown-menu absolute right-0 mt-2 bg-gray-200 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg z-10">
                   <ul>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        to={"/profile"}
                         className="block px-4 py-2 text-@19345E  dark:text-white hover:bg-white dark:hover:bg-gray-700"
                       >
                         Profile
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <a
-                        href="#"
                         className="block px-4 py-2 text-@19345E dark:text-white hover:bg-white dark:hover:bg-gray-700"
+                        onClick={handleLogout}
                       >
                         Logout
                       </a>
@@ -84,3 +114,10 @@ export const LoggedInNavbar: FC<NavbarProps> = ({imageSrc}) => {
     </header>
   );
 };
+function dispatch(arg0: any) {
+  throw new Error("Function not implemented.");
+}
+
+function removeCookie(arg0: string) {
+  throw new Error("Function not implemented.");
+}

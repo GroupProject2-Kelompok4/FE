@@ -12,11 +12,15 @@ const AddMentee: React.FC = () => {
   const [gender, setGender] = useState("");
   const [academic, setAcademic] = useState("");
 
-  const handleGenderChange = (event) => {
+  const handleGenderChange = (event: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     setGender(event.target.value);
   };
 
-  const handleAcademicChange = (event) => {
+  const handleAcademicChange = (event: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     setAcademic(event.target.value);
   };
   return (
